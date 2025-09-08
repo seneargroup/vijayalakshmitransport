@@ -135,17 +135,17 @@ function validateBookingForm(data) {
 
 // Create WhatsApp message
 function createWhatsAppMessage(data) {
-    return `🚗 *New Booking Request - Vijayalakshmi Transport*
+    return `🚛 *New Transport Booking - Vijayalakshmi Transport*
 
-📍 *Pickup:* ${data.pickup}
-📍 *Destination:* ${data.destination}
+📍 *Pickup Location:* ${data.pickup}
+📍 *Delivery Location:* ${data.destination}
 📅 *Date:* ${data.date}
 🕐 *Time:* ${data.time}
-🚗 *Vehicle:* ${data.vehicle}
-⚖️ *Weight:* ${data.weight}
+🚛 *Vehicle Type:* ${data.vehicle}
+⚖️ *Cargo Weight:* ${data.weight}
 📱 *Phone:* ${data.phone}
 
-Please confirm availability and pricing.
+Please confirm availability and pricing for goods transport.
 
 Thank you!
 📍 Address: Door. No. 27, 2-4, 100 Feet Rd, Gajuwaka, Visakhapatnam
