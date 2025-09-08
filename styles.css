@@ -749,10 +749,24 @@ section {
         font-size: 2rem;
     }
 
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 100px 0 50px;
+    }
+
     .hero-content {
         grid-template-columns: 1fr;
         gap: 2rem;
         text-align: center;
+        padding: 0 15px;
+    }
+
+    .booking-form {
+        max-width: 100%;
+        width: 100%;
+        padding: 1rem;
+        margin: 0 auto;
     }
 
     .hero-buttons {
@@ -770,13 +784,15 @@ section {
         gap: 0.6rem;
     }
     
-    .booking-form {
-        max-width: 100%;
-        padding: 1.2rem;
-    }
-    
     .booking-form h3 {
         font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 10px;
+        font-size: 16px;
     }
 
     .services-grid {
@@ -807,23 +823,51 @@ section {
 
 @media (max-width: 480px) {
     .container {
-        padding: 0 15px;
+        padding: 0 10px;
     }
 
     h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .hero-text p {
-        font-size: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .hero-content {
+        padding: 0 10px;
     }
 
     .booking-form {
-        padding: 1.5rem;
+        padding: 0.8rem;
+        margin: 0;
+    }
+
+    .booking-form h3 {
+        font-size: 1.1rem;
+    }
+
+    .form-group {
+        margin-bottom: 0.6rem;
+    }
+
+    .form-group label {
+        font-size: 0.85rem;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
     }
 
     section {
-        padding: 60px 0;
+        padding: 50px 0;
     }
 }
 
