@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 :root {
     --primary-red: #DC143C;
     --dark-red: #B22222;
@@ -27,12 +32,16 @@ body {
     line-height: 1.6;
     color: var(--dark-gray);
     overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Typography */
@@ -107,7 +116,7 @@ h3 {
     backdrop-filter: blur(10px);
     z-index: 1000;
     transition: var(--transition);
-    padding: 1rem 0;
+    padding: 0.8rem 0;
 }
 
 .navbar.scrolled {
@@ -118,10 +127,12 @@ h3 {
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .nav-logo {
@@ -139,7 +150,7 @@ h3 {
 
 .nav-logo span {
     font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 600;
     color: var(--gold);
 }
@@ -241,6 +252,7 @@ h3 {
     gap: 3rem;
     align-items: center;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .hero-text h1 {
@@ -272,6 +284,7 @@ h3 {
     border: 1px solid var(--gold);
     max-width: 380px;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .booking-form h3 {
@@ -716,9 +729,11 @@ section {
         flex-direction: column;
         background: rgba(0, 0, 0, 0.95);
         width: 100%;
+        height: calc(100vh - 70px);
         text-align: center;
         transition: var(--transition);
         padding: 2rem 0;
+        z-index: 999;
     }
 
     .nav-menu.active {
@@ -727,6 +742,7 @@ section {
 
     .nav-toggle {
         display: flex;
+        z-index: 1001;
     }
 
     .nav-toggle.active .bar:nth-child(2) {
@@ -760,13 +776,16 @@ section {
         gap: 2rem;
         text-align: center;
         padding: 0 15px;
+        max-width: 100%;
+        overflow-x: hidden;
     }
 
     .booking-form {
         max-width: 100%;
-        width: 100%;
+        width: calc(100% - 30px);
         padding: 1rem;
         margin: 0 auto;
+        box-sizing: border-box;
     }
 
     .hero-buttons {
@@ -826,6 +845,11 @@ section {
 @media (max-width: 480px) {
     .container {
         padding: 0 10px;
+        max-width: 100%;
+    }
+    
+    .nav-container {
+        padding: 0 10px;
     }
 
     h1 {
@@ -838,11 +862,14 @@ section {
 
     .hero-content {
         padding: 0 10px;
+        max-width: calc(100vw - 20px);
     }
 
     .booking-form {
         padding: 0.8rem;
         margin: 0;
+        width: 100%;
+        max-width: 100%;
     }
 
     .booking-form h3 {
